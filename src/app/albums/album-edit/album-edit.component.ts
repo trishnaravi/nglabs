@@ -12,7 +12,7 @@ import { AlbumService } from '../shared/album.service';
 })
 export class AlbumEditComponent implements OnInit {
 
- // albumQueryString: Observable<string>; 
+ // albumQueryString: Observable<string>;
   album;
   constructor(private route: ActivatedRoute,
               private service: AlbumService,
@@ -27,10 +27,10 @@ export class AlbumEditComponent implements OnInit {
   }
 
   editAlbum(){
-      console.log('in edit album calling service');      
+      console.log('in edit album calling service');
       this.service.updateAlbum(this.album).subscribe(
         ()=>this.router.navigate(['./albums']),
-      )    
+      )
   }
 
 }
